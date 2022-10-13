@@ -4,8 +4,10 @@ const ans = [
   0x99, 0x6d, 0x88, 0x68, 0x94, 0x9f, 0x8d, 0x4d, 0xa5, 0x9d, 0x45,
 ];
 
-const newArr = ans.map((value, idx) => {
-  return (value - 2 * idx) ^ idx;
-});
-
-console.log(String.fromCharCode(...newArr));
+console.log(
+  String.fromCharCode(
+    ...ans.map((value, idx) => {
+      return (value - 2 * idx) ^ idx;
+    })
+  )
+);
